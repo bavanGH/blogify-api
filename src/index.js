@@ -1,13 +1,11 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const postRoutes = require('./routes/posts.routes');
+const postsRoutes = require("./routes/posts.routes");
 
 app.use(express.json());
-app.use('/api/v1/posts', postRoutes);
+app.use("/", postsRoutes);
 
-const PORT = 3000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
 });
